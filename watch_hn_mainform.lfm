@@ -1,9 +1,9 @@
 object Form1: TForm1
-  Left = 1912
+  Left = 1823
   Height = 558
-  Top = 11
+  Top = -130
   Width = 1109
-  Caption = 'Form1'
+  Caption = 'WatchHN - Watch a Hacker News thread in a cross platform GUI'
   ClientHeight = 558
   ClientWidth = 1109
   OnCreate = FormCreate
@@ -48,6 +48,7 @@ object Form1: TForm1
     Lines.Strings = (
       'Memo1'
     )
+    ScrollBars = ssAutoVertical
     TabOrder = 3
   end
 end
