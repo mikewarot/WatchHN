@@ -1,0 +1,28 @@
+This project is inspired by a thread of Hacker News, asking this question
+
+"I have the idea of an app that is mostly about communicating with an API on the WEB. It feels a considerable overkill for an Electron App. The size of a hello world app in Electron is 100x the size of my backend!
+On the business side, I understand that many people on HN prefer to ship that spend time on technologies discussions.
+
+But if you have the time, and your goal is to do something maintainable, reasonably close the most to the Desktop, and well-integrated to the OS, what tech/stack will you use?
+
+Windows/Linux GTK/MacOS"
+
+Here we're using Lazarus, with initial development happening on a laptop running Windows 10
+
+I'll then port it to run on Ubuntu in a virtual machine
+
+I don't have a Macintosh to try it out on
+
+
+As an MVP this program will
+  Allow the user to put in a thread ID on hacker news
+  Make appropriate calls to  https://hacker-news.firebaseio.com/ to retrieve the thread, and all of its comments in a truee
+  Display the thread and its comments in a suitable tree inside the GUI
+  Have a menu, tool tips, and save state (at least the thread ID)
+
+
+Documentation sources:
+  https://github.com/HackerNews/API - fairly good documentation about the API which can be used to retrieve HN posts
+
+
+

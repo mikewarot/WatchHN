@@ -2,7 +2,51 @@ object Form1: TForm1
   Left = 1879
   Height = 558
   Top = -78
-  Width = 745
+  Width = 1109
   Caption = 'Form1'
+  ClientHeight = 558
+  ClientWidth = 1109
   LCLVersion = '2.0.12.0'
+  object EditThreadID: TEdit
+    Left = 80
+    Height = 23
+    Top = 24
+    Width = 176
+    TabOrder = 0
+    Text = '28484658'
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 15
+    Top = 24
+    Width = 53
+    Caption = 'Thread ID '
+    ParentColor = False
+  end
+  object TreeView1: TTreeView
+    Left = 80
+    Height = 216
+    Top = 304
+    Width = 960
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 301
+    Height = 25
+    Top = 24
+    Width = 139
+    Caption = 'Get Contents'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+  object Memo1: TMemo
+    Left = 81
+    Height = 202
+    Top = 80
+    Width = 959
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 3
+  end
 end
