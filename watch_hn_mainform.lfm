@@ -1,11 +1,12 @@
 object Form1: TForm1
-  Left = 1879
+  Left = 1912
   Height = 558
-  Top = -78
+  Top = 11
   Width = 1109
   Caption = 'Form1'
   ClientHeight = 558
   ClientWidth = 1109
+  OnCreate = FormCreate
   LCLVersion = '2.0.12.0'
   object EditThreadID: TEdit
     Left = 80
