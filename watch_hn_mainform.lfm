@@ -25,11 +25,14 @@ object Form1: TForm1
     ParentColor = False
   end
   object TreeView1: TTreeView
-    Left = 80
+    Left = 81
     Height = 216
     Top = 304
     Width = 960
+    AutoExpand = True
+    ScrollBars = ssAutoBoth
     TabOrder = 1
+    Options = [tvoAutoExpand, tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
   end
   object Button1: TButton
     Left = 301

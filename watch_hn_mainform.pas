@@ -47,6 +47,7 @@ var
   parser : TJSONparser;
   d  : TJSONdata;
   i : integer;
+  t : string;
 begin
   Memo1.Clear;
   s := 'Fetching contents of Thread #' + EditThreadID.Text + ' via the web';
@@ -64,9 +65,12 @@ begin
   Memo1.Append('Got '+i.ToString+' JSON items');
   Memo1.Append(' -- ');
 
+  t := D.FindPath('text').AsString;
 
+  Memo1.Append('Text = '+t);
 
-
+  TreeView1.Items.Clear;
+  TreeView1.Items.AddFirst(nil,T);
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
