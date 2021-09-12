@@ -27,3 +27,7 @@ Documentation sources:
   http://lazplanet.blogspot.com/2019/03/how-to-get-contents-of-url-in-2-ways.html
     shows how to properly use the HTTP client component
 
+  https://forum.lazarus.freepascal.org/index.php/topic,30162.msg191493.html
+    gives hints about how to use json and the json parser
+
+

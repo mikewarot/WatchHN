@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ComCtrls, fphttpclient, openssl,
-  opensslsockets;
+  opensslsockets,
+  fpjson, jsonparser;
 
 
 type
@@ -43,6 +44,9 @@ var
   s : string;
   url : string;
   r : string;
+  parser : TJSONparser;
+  d  : TJSONdata;
+  i : integer;
 begin
   Memo1.Clear;
   s := 'Fetching contents of Thread #' + EditThreadID.Text + ' via the web';
@@ -52,6 +56,16 @@ begin
   Memo1.Append('Fetching URL: '+url);
   r := http1.Get(url);
   memo1.Append(r);
+
+  Parser := TJSONParser.Create(r);
+  D := Parser.Parse;
+  i := d.Count;
+  Memo1.Append(' -- ');
+  Memo1.Append('Got '+i.ToString+' JSON items');
+  Memo1.Append(' -- ');
+
+
+
 
 end;
 
