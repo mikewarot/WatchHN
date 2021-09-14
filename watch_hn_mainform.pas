@@ -46,8 +46,10 @@ var
   r : string;
   parser : TJSONparser;
   d  : TJSONdata;
+  kids : TJSONarray;
   i : integer;
   t : string;
+  childID : TJSONenum;
 begin
   Memo1.Clear;
   s := 'Fetching contents of Thread #' + EditThreadID.Text + ' via the web';
@@ -71,6 +73,16 @@ begin
 
   TreeView1.Items.Clear;
   TreeView1.Items.AddFirst(nil,T);
+
+  Memo1.Append(' -- ');
+  Memo1.Append(' Getting Comments');
+  Memo1.Append(' -- ');
+
+
+  kids := TJSONarray(d.FindPath('kids'));
+  for childid in kids do
+    memo1.Append('  Item #'+childid.Value.AsString);
+  Memo1.Append(' -- ');
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
